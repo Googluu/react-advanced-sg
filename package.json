@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "vercel-build": "npm run build",
     "build": "webpack",
     "lint": "standard",
     "lint-fix": "standard --fix",
@@ -26,7 +27,8 @@
   "dependencies": {
     "@babel/preset-react": "^7.16.7",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "styled-components": "^5.3.5"
   },
   "standard": {
     "ignore": [
