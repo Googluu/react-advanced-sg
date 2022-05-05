@@ -1,16 +1,47 @@
 import React from 'react';
-import { ListOfCategories } from './components/ListOfCategories';
-import { GlobalStyles } from './components/styles/GlobalStyles';
-import { ListOfPhotoCard } from './components/ListOfPhotoCard';
+import { GlobalStyles } from './styles/GlobalStyles';
 import { Logo } from './components/Logo';
+import { NavBar } from './components/NavBar';
 
+import { Home } from './pages/Home';
+import { Details } from './pages/Details';
+import { Favs } from './pages/Favs';
+import { User } from './pages/User';
+import { NotRegisteredUser } from './pages/NotRegisteredUser';
 
-export const App = () => (
-    <div>
-        <GlobalStyles />
-        <Logo />
-        <ListOfCategories />
-        <ListOfPhotoCard />
-    </div>
-);
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Context from './Context';
+
+export const App = () => {
+    return (
+        <div>
+        <BrowserRouter>    
+            <GlobalStyles />
+            <Logo />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/detail/:detailId' element={<Details />} />
+                <Route path='/pet/:id' element={<Home />} />
+                </Routes>
+
+                <Context.Consumer>
+                    {
+                        ({ isAuth }) => 
+                            isAuth 
+                                ? <Routes>
+                                    <Route path='/favs' element={<Favs />} />
+                                    <Route path='/User' element={<User />} />
+                                </Routes>
+                                : <Routes>
+                                    <Route path='/favs' element={<NotRegisteredUser />} />
+                                    <Route path='/user' element={<NotRegisteredUser />} />
+                                    </Routes>
+                    }
+                </Context.Consumer>
+                <NavBar />
+        </BrowserRouter>
+        </div>
+    )
+}
 

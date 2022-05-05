@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components'
-import { fadeIn } from '../styles/animation';
+import { fadeIn } from '../../styles/animation';
 
 export const Article = styled.article`
   min-height: 200px;
@@ -25,12 +25,3 @@ export const Img = styled.img`
   width: 100%;
 `
 
-export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  padding-top: 8px;
-  border: none;
-  & svg {
-    margin-right: 4px;
-  }
-`
