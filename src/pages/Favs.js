@@ -1,7 +1,10 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { RenderProp } from '../hooks/useGetFavs'
+import { Layout } from '../components/Layout'
 
-export const Favs = () => (
-  <Fragment>
-    <h1>Favs</h1>
-  </Fragment>
+export const Favs = ()=>(
+  <Layout title="Tus favoritos" subtitle="'Aquí 
+  puedes encontrar tus favoritos">
+    <RenderProp />
+  </Layout>
 )

@@ -8,6 +8,7 @@ import { Details } from './pages/Details';
 import { Favs } from './pages/Favs';
 import { User } from './pages/User';
 import { NotRegisteredUser } from './pages/NotRegisteredUser';
+import { NotFound } from './pages/NotFound';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -23,6 +24,7 @@ export const App = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/detail/:detailId' element={<Details />} />
                 <Route path='/pet/:id' element={<Home />} />
+                <Route element={<NotFound />} default />
                 </Routes>
 
                 <Context.Consumer>
@@ -44,4 +46,3 @@ export const App = () => {
         </div>
     )
 }
-

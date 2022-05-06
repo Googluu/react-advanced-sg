@@ -3,7 +3,7 @@ export const Context = createContext()
 
 const Provider = ({ children }) => {
     const [ isAuth, setIsAuth ] = useState(() => {
-        return window.sessionStorage.getItem('token')
+        console.log(window.sessionStorage.getItem('token'))
     });
 
         const value = {
@@ -11,6 +11,10 @@ const Provider = ({ children }) => {
             activateAuth: token => {
             setIsAuth(true)
             window.sessionStorage.setItem('token', token)
+        },
+        removeAuth: () => {
+            setIsAuth(false)
+            window.sessionStorage.removeItem('token')
         }
     }
 

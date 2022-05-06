@@ -10,6 +10,11 @@ mutation likeAnonymousPhoto($input: LikePhoto!) {
 }
 `
 
+// export const ToggleLikeMutation = () => {
+//     const [] = useMutation(LIKE_PHOTO)
+//     return []
+// }
+
 export const ToggleLikeMutation = () => {
     const [mutation, { loading: mutationLoading, error: mutationError }] =
     useMutation(LIKE_PHOTO)

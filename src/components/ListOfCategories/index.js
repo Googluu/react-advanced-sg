@@ -3,13 +3,15 @@ import { Category } from '../Category'
 
 import { List, Item } from './styles'
 
+
+
 function useCategoriesData () {
   const [categories, setCategories] = useState([])
   const [loading, setLoading] = useState(false)
 
   useEffect(function () {
     setLoading(true)
-    window.fetch('https://petgram-server-leidy-daza-leidydaza.vercel.app/categories')
+    window.fetch('https://petgram-server-max-seven.vercel.app/categories')
       .then(res => res.json())
       .then(response => {
         setCategories(response)
