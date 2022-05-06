@@ -12,4 +12,4 @@ export const Home = () => {
             <ListOfPhotoCards categoryId={params.categoryId} />
         </Fragment>
     )
-    }
+}

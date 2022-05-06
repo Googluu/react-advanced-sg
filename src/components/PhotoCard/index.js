@@ -50,12 +50,10 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
                         } })
                         setLiked(!liked)
                         }
-
                         return  <FavButton 
                         liked={liked} 
                         likes={likes} 
                         onClick={handleFavClick}/>
-
                     }
                 }
             </ToggleLikeMutation>         */}
