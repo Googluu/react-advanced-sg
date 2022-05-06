@@ -10,7 +10,7 @@
     "lint-fix": "standard --fix",
     "dev": "webpack-dev-server --history-api-fallback",
     "serve:dev": "webpack --mode development && npx serve dist -s",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress open"
   },
   "keywords": [],
   "author": "Sneyder J.H Rodríguez <sneyder.h.rodriguez@gmail.com>",
@@ -21,6 +21,7 @@
     "@babel/preset-env": "^7.17.10",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.5",
+    "cypress": "^9.6.0",
     "html-webpack-plugin": "^5.5.0",
     "standard": "^17.0.0",
     "webpack": "^5.72.0",
