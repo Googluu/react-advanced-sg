@@ -46,13 +46,13 @@ PhotoCard.propTypes = {
     liked: PropTypes.bool.isRequired,
     src: PropTypes.string.isRequired,
     likes: function (props, propName, componentName) {
-      const propValue = props[propName]
-  
-      if (propValue === undefined) {
+        const propValue = props[propName]
+
+    if (propValue === undefined) {
         return new Error(`${propName} value must be defined`)
-      }
-      if (propValue < 0) {
-        return new Error(`${propName} value must be greater than 0`)
-      }
     }
-  }
+    if (propValue < 0) {
+            return new Error(`${propName} value must be greater than 0`)
+        } 
+    }
+}
