@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { ListOfCategories } from '../components/ListOfCategories';
 import { ListOfPhotoCards } from '../container/ListOfPhotoCards';
-import { Helmet } from 'react-helmet'
 import { Layout } from '../components/Layout';
 
 

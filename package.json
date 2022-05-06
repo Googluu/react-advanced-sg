@@ -9,6 +9,7 @@
     "lint": "standard",
     "lint-fix": "standard --fix",
     "dev": "webpack-dev-server --history-api-fallback",
+    "serve:dev": "webpack --mode development && npx serve dist -s",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -31,6 +32,7 @@
     "@babel/preset-react": "^7.16.7",
     "graphql": "^16.4.0",
     "intersection-observer": "^0.12.0",
+    "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",

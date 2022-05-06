@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { Logo } from './components/Logo';
 import { NavBar } from './components/NavBar';
 
 import { Home } from './pages/Home';
 import { Details } from './pages/Details';
-import { Favs } from './pages/Favs';
+// import { Favs } from './pages/Favs';
 import { User } from './pages/User';
 import { NotRegisteredUser } from './pages/NotRegisteredUser';
 import { NotFound } from './pages/NotFound';
@@ -14,9 +14,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Context from './Context';
 
+const Favs = React.lazy(() => import('./pages/Favs'))
+
 export const App = () => {
     return (
-        <div>
+        <Suspense fallback={<div/>}>
         <BrowserRouter>    
             <GlobalStyles />
             <Logo />
@@ -43,6 +45,6 @@ export const App = () => {
                 </Context.Consumer>
                 <NavBar />
         </BrowserRouter>
-        </div>
+        </Suspense>
     )
 }
