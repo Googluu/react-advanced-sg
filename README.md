@@ -1,1 +1,1 @@
-## platzi-react-avanzado ⚛️
+## platzi-react-avanzado-sg ⚛️
